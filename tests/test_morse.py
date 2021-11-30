@@ -3,6 +3,10 @@ import unittest
 from morse import decode
 
 class TestMorse(unittest.TestCase):
+
+    def test_whole_sentence(self):
+        message = decode(".- .-.. .-.. / -.-- --- ..- / -. . . -.. / .. ... / -.-. --- -.. .")
+        self.assertEqual(message, "ALL YOU NEED IS CODE")
     def test_empty_message(self):
         self.assertEqual(decode(""), "")
 
